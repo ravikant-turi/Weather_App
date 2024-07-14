@@ -1,4 +1,4 @@
-const apiUrl = 'http://api.weatherapi.com/v1/current.json?key=108fd45a2cde40bcaea174646241407&q=London&aqi=no'
+// const apiUrl = 'http://api.weatherapi.com/v1/current.json?key=108fd45a2cde40bcaea174646241407&q=London&aqi=no'
 const input = document.getElementById("input")
 function submitHandler(e) {
     e.preventDefault();
@@ -6,7 +6,7 @@ function submitHandler(e) {
 
 
 
-    fetch(`http://api.weatherapi.com/v1/current.json?key=108fd45a2cde40bcaea174646241407&q=${input.value}`)
+    fetch(`https://api.weatherapi.com/v1/current.json?key=108fd45a2cde40bcaea174646241407&q=${input.value}`)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok ' + response.statusText);
